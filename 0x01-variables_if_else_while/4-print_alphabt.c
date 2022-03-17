@@ -1,6 +1,6 @@
-#include<stdio.h>
-#include<stlib.h>
-#include<string.h>
+#include <stdio.h>
+#include <stlib.h>
+#include <string.h>
 
 /**
  * main - Prints the alphabet without q and e.
