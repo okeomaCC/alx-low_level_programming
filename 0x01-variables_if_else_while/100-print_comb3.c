@@ -1,33 +1,29 @@
-#include<stdio.h>
-
+#include <stdio.h>
+#include <unistd.h>
 /**
- * main - prints number's between 01 and 89.
- *
- * Return: Always 0 (success)
+ *  * main - Entyr point
+ *   * Description: prints two digits combination
+ *    * Return: Always 0 (success)
  */
 int main(void)
 {
-	int i, e;
+	int c, i;
 
-	i = 48;
-	e = 48;
-
-	while (e < 58)
+	for (c = '0'; c <= '9'; c++)
 	{
-		i = 48;
-		while (i < 58)
+		for (i = '0'; i <= '9'; i++)
 		{
-			putchar(e);
-			putchar(i);
-			if (i == 57 && e == 57)
+			if (c < i)
 			{
-				break;
+				putchar(c);
+				putchar(i);
+				if (c != '8' || (c == '8' && i != '9'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
-			putchar(',');
-			putchar(' ');
-			i++;
 		}
-		e++;
 	}
 	putchar('\n');
 	return (0);
